@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Management System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Product Management System</h1>
+
+      <!-- Form to Add or Update Products -->
+      <form id="productForm">
+        <h2>Add or Update Product</h2>
+        <input type="hidden" id="productId" />
+        <label for="productName">Product Name:</label>
+        <input type="text" id="productName" required placeholder="Enter product name" />
+
+        <label for="price">Price:</label>
+        <input type="number" id="price" required placeholder="Enter price" />
+
+        <label for="category">Category:</label>
+        <input type="text" id="category" required placeholder="Enter category" />
+
+        <button type="submit" class="btn">Save Product</button>
+      </form>
+
+      <!-- Sorting Buttons -->
+      <div class="sort-buttons">
+        <button onclick="sortByPrice('asc')" class="btn">Sort: Low to High</button>
+        <button onclick="sortByPrice('desc')" class="btn">Sort: High to Low</button>
+      </div>
+
+      <!-- Table to View Products -->
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Category</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="productTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
